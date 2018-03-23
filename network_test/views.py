@@ -2,8 +2,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, render_to_response
 
 from .forms import NetworkTestForm
-from .zabbix import *
 import urlparse
+from network_test.libs.zabbix import *
 
 def _form_view(request, template_name='basic.html', form_class=NetworkTestForm):
     if request.method == 'POST':
